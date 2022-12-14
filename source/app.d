@@ -1,6 +1,5 @@
 import std.stdio;
 import ezcolor;
-import std.process;
 
 void main() {
 	writeln(RGB(255, 111, 33), "RGB", RESET);
