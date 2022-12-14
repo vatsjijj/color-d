@@ -207,20 +207,20 @@ struct RGB {
   string style = "";
 
   this(int r, int g, int b) {
-    this.r = r > 255 ? 255 : r < 0 ? 0 : r;
-    this.g = g > 255 ? 255 : g < 0 ? 0 : g;
-    this.b = b > 255 ? 255 : b < 0 ? 0 : b;
+    this.r = clampT!(int).clamp(255, 0, r);
+    this.g = clampT!(int).clamp(255, 0, g);
+    this.b = clampT!(int).clamp(255, 0, b);
   }
   this(int r, int g, int b, bool fg) {
-    this.r = r > 255 ? 255 : r < 0 ? 0 : r;
-    this.g = g > 255 ? 255 : g < 0 ? 0 : g;
-    this.b = b > 255 ? 255 : b < 0 ? 0 : b;
+    this.r = clampT!(int).clamp(255, 0, r);
+    this.g = clampT!(int).clamp(255, 0, g);
+    this.b = clampT!(int).clamp(255, 0, b);
     this.fg = fg;
   }
   this(int r, int g, int b, string style) {
-    this.r = r > 255 ? 255 : r < 0 ? 0 : r;
-    this.g = g > 255 ? 255 : g < 0 ? 0 : g;
-    this.b = b > 255 ? 255 : b < 0 ? 0 : b;
+    this.r = clampT!(int).clamp(255, 0, r);
+    this.g = clampT!(int).clamp(255, 0, g);
+    this.b = clampT!(int).clamp(255, 0, b);
     this.style = style;
   }
 
