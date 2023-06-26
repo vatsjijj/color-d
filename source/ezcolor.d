@@ -105,7 +105,7 @@ struct HSV {
     this.style = style;
   }
 
-  string toString() const @safe pure nothrow {
+  string toString() const @safe nothrow {
     string res;
     double rp, gp, bp;
     int r, g, b;
@@ -179,7 +179,7 @@ struct CMYK {
     this.style = style;
   }
 
-  string toString() const @safe pure nothrow {
+  string toString() const @safe nothrow {
     string res;
     int r, g, b;
     r = cast(int)round(255.0 * (1 - this.c / 100.0) * (1 - this.k / 100.0));
@@ -224,7 +224,7 @@ struct RGB {
     this.style = style;
   }
 
-  string toString() const @safe pure nothrow {
+  string toString() const @safe nothrow {
     string res;
     switch (this.style) {
       case "b": res ~= "\x1b[1m"; break;
